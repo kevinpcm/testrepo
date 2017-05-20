@@ -1,0 +1,1179 @@
+﻿**********************
+Windows PowerShell transcript start
+Start time: 20170426153001
+Username: DKEVIN\KevinB
+RunAs User: DKEVIN\KevinB
+Machine: KEVIN (Microsoft Windows NT 10.0.14393.0)
+Host Application: C:\Windows\System32\WindowsPowerShell\v1.0\powershell.exe -NoExit -Command Import-Module MSOnline
+Process ID: 3488
+PSVersion: 5.1.14393.206
+PSEdition: Desktop
+PSCompatibleVersions: 1.0, 2.0, 3.0, 4.0, 5.0, 5.1.14393.206
+BuildVersion: 10.0.14393.206
+CLRVersion: 4.0.30319.42000
+WSManStackVersion: 3.0
+PSRemotingProtocolVersion: 2.3
+SerializationVersion: 1.1.0.1
+**********************
+Transcript started, output file is .\Office365_PowerShell.txt
+posd:EXCHANGEENTERPRISE
+posd:EXCHANGEENTERPRISE
+posd:SHAREPOINTENTERPRISE
+posd:SHAREPOINTENTERPRISE
+posd:STANDARDPACK
+posd:STANDARDPACK
+jchan@PORTOFSANDIEGO.ORG is assigned the SKU(s): posd:STANDARDPACK. REMOVING SKU(s) now
+jchan@PORTOFSANDIEGO.ORG is not assigned SKU: posd:ENTERPRISEPACK. Adding SKU with Base Options
+PS C:\scripts\git\Azure> Remove-Module License365 ; import-module License365
+PS C:\scripts\git\Azure> $users
+
+UserPrincipalName        DisplayName isLicensed
+-----------------        ----------- ----------
+jchan@PORTOFSANDIEGO.ORG Joseph Chan True
+
+
+PS C:\scripts\git\Azure> $users | Set-365License
+Transcript started, output file is .\Office365_PowerShell.txt
+posd:EXCHANGEENTERPRISE
+posd:EXCHANGEENTERPRISE
+posd:EXCHANGEENTERPRISE,posd:SHAREPOINTENTERPRISE
+posd:EXCHANGEENTERPRISE
+posd:SHAREPOINTENTERPRISE
+jchan@PORTOFSANDIEGO.ORG is assigned the SKU(s): posd:EXCHANGEENTERPRISE posd:SHAREPOINTENTERPRISE. REMOVING SKU(s) now
+jchan@PORTOFSANDIEGO.ORG is already assigned SKU: posd:ENTERPRISEPACK. Modifying options if necessary.
+PS C:\scripts\git\Azure> cls
+PS C:\scripts\git\Azure> cd C:\scripts\
+PS C:\scripts> cls
+PS C:\scripts> Import-Csv posd_b1.csv
+
+UserPrincipalName
+-----------------
+ajimenez@portofsandiego.org
+cjoslin@portofsandiego.org
+dkerberg@portofsandiego.org
+dparment@portofsandiego.org
+eseeber@portofsandiego.org
+gdeleon@PORTOFSANDIEGO.ORG
+gdixon@PORTOFSANDIEGO.ORG
+hhicks@PORTOFSANDIEGO.ORG
+hirizarr@portofsandiego.org
+jmededov@portofsandiego.org
+jbenedict@PORTOFSANDIEGO.ORG
+
+
+PS C:\scripts> $abc = Import-Csv posd_b1.csv
+PS C:\scripts> $abc
+
+UserPrincipalName
+-----------------
+ajimenez@portofsandiego.org
+cjoslin@portofsandiego.org
+dkerberg@portofsandiego.org
+dparment@portofsandiego.org
+eseeber@portofsandiego.org
+gdeleon@PORTOFSANDIEGO.ORG
+gdixon@PORTOFSANDIEGO.ORG
+hhicks@PORTOFSANDIEGO.ORG
+hirizarr@portofsandiego.org
+jmededov@portofsandiego.org
+jbenedict@PORTOFSANDIEGO.ORG
+
+
+PS C:\scripts> $abc | Set-365License
+Transcript started, output file is .\Office365_PowerShell.txt
+posd:STANDARDPACK
+posd:STANDARDPACK
+ajimenez@portofsandiego.org is assigned the SKU(s): posd:STANDARDPACK. REMOVING SKU(s) now
+ajimenez@portofsandiego.org is already assigned SKU: posd:ENTERPRISEPACK. Modifying options if necessary.
+posd:EXCHANGEENTERPRISE
+posd:EXCHANGEENTERPRISE
+posd:EXCHANGEENTERPRISE,posd:SHAREPOINTENTERPRISE
+posd:EXCHANGEENTERPRISE
+posd:SHAREPOINTENTERPRISE
+posd:EXCHANGEENTERPRISE,posd:SHAREPOINTENTERPRISE,posd:STANDARDPACK
+posd:EXCHANGEENTERPRISE
+posd:SHAREPOINTENTERPRISE
+posd:STANDARDPACK
+cjoslin@portofsandiego.org is assigned the SKU(s): posd:EXCHANGEENTERPRISE posd:SHAREPOINTENTERPRISE posd:STANDARDPACK. REMOVING SKU(s) now
+Set-MsolUserLicense : Unable to assign this license.
+At C:\Program Files\WindowsPowerShell\Modules\License365\License365.psm1:466 char:17
++ ...             Set-MsolUserLicense -UserPrincipalName $user.userprincipa ...
++                 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+    + CategoryInfo          : OperationStopped: (:) [Set-MsolUserLicense], MicrosoftOnlineException
+    + FullyQualifiedErrorId : Microsoft.Online.Administration.Automation.InvalidLicenseConfigurationException,Microsoft.
+Online.Administration.Automation.SetUserLicense
+Set-MsolUserLicense : Unable to assign this license.
+At C:\Program Files\WindowsPowerShell\Modules\License365\License365.psm1:466 char:17
++ ...             Set-MsolUserLicense -UserPrincipalName $user.userprincipa ...
++                 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+    + CategoryInfo          : OperationStopped: (:) [Set-MsolUserLicense], MicrosoftOnlineExceptio
+   n
+    + FullyQualifiedErrorId : Microsoft.Online.Administration.Automation.InvalidLicenseConfigurati
+   onException,Microsoft.Online.Administration.Automation.SetUserLicense
+
+cjoslin@portofsandiego.org is not assigned SKU: posd:ENTERPRISEPACK. Adding SKU with Base Options
+posd:EXCHANGEENTERPRISE
+posd:EXCHANGEENTERPRISE
+posd:EXCHANGEENTERPRISE,posd:STANDARDPACK
+posd:EXCHANGEENTERPRISE
+posd:STANDARDPACK
+dkerberg@portofsandiego.org is assigned the SKU(s): posd:EXCHANGEENTERPRISE posd:STANDARDPACK. REMOVING SKU(s) now
+dkerberg@portofsandiego.org is not assigned SKU: posd:ENTERPRISEPACK. Adding SKU with Base Options
+posd:EXCHANGEENTERPRISE
+posd:EXCHANGEENTERPRISE
+posd:EXCHANGEENTERPRISE,posd:STANDARDPACK
+posd:EXCHANGEENTERPRISE
+posd:STANDARDPACK
+dparment@portofsandiego.org is assigned the SKU(s): posd:EXCHANGEENTERPRISE posd:STANDARDPACK. REMOVING SKU(s) now
+dparment@portofsandiego.org is not assigned SKU: posd:ENTERPRISEPACK. Adding SKU with Base Options
+posd:EXCHANGEENTERPRISE
+posd:EXCHANGEENTERPRISE
+posd:EXCHANGEENTERPRISE,posd:SHAREPOINTENTERPRISE
+posd:EXCHANGEENTERPRISE
+posd:SHAREPOINTENTERPRISE
+posd:EXCHANGEENTERPRISE,posd:SHAREPOINTENTERPRISE,posd:STANDARDPACK
+posd:EXCHANGEENTERPRISE
+posd:SHAREPOINTENTERPRISE
+posd:STANDARDPACK
+eseeber@portofsandiego.org is assigned the SKU(s): posd:EXCHANGEENTERPRISE posd:SHAREPOINTENTERPRISE posd:STANDARDPACK. REMOVING SKU(s) now
+eseeber@portofsandiego.org is not assigned SKU: posd:ENTERPRISEPACK. Adding SKU with Base Options
+posd:EXCHANGEENTERPRISE
+posd:EXCHANGEENTERPRISE
+posd:EXCHANGEENTERPRISE,posd:STANDARDPACK
+posd:EXCHANGEENTERPRISE
+posd:STANDARDPACK
+gdeleon@PORTOFSANDIEGO.ORG is assigned the SKU(s): posd:EXCHANGEENTERPRISE posd:STANDARDPACK. REMOVING SKU(s) now
+gdeleon@PORTOFSANDIEGO.ORG is not assigned SKU: posd:ENTERPRISEPACK. Adding SKU with Base Options
+posd:EXCHANGEENTERPRISE
+posd:EXCHANGEENTERPRISE
+posd:EXCHANGEENTERPRISE,posd:SHAREPOINTENTERPRISE
+posd:EXCHANGEENTERPRISE
+posd:SHAREPOINTENTERPRISE
+posd:EXCHANGEENTERPRISE,posd:SHAREPOINTENTERPRISE,posd:STANDARDPACK
+posd:EXCHANGEENTERPRISE
+posd:SHAREPOINTENTERPRISE
+posd:STANDARDPACK
+gdixon@PORTOFSANDIEGO.ORG is assigned the SKU(s): posd:EXCHANGEENTERPRISE posd:SHAREPOINTENTERPRISE posd:STANDARDPACK. REMOVING SKU(s) now
+Set-MsolUserLicense : Unable to assign this license.
+At C:\Program Files\WindowsPowerShell\Modules\License365\License365.psm1:466 char:17
++ ...             Set-MsolUserLicense -UserPrincipalName $user.userprincipa ...
++                 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+    + CategoryInfo          : OperationStopped: (:) [Set-MsolUserLicense], MicrosoftOnlineException
+    + FullyQualifiedErrorId : Microsoft.Online.Administration.Automation.InvalidLicenseConfigurationException,Microsoft.
+Online.Administration.Automation.SetUserLicense
+Set-MsolUserLicense : Unable to assign this license.
+At C:\Program Files\WindowsPowerShell\Modules\License365\License365.psm1:466 char:17
++ ...             Set-MsolUserLicense -UserPrincipalName $user.userprincipa ...
++                 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+    + CategoryInfo          : OperationStopped: (:) [Set-MsolUserLicense], MicrosoftOnlineExceptio
+   n
+    + FullyQualifiedErrorId : Microsoft.Online.Administration.Automation.InvalidLicenseConfigurati
+   onException,Microsoft.Online.Administration.Automation.SetUserLicense
+
+gdixon@PORTOFSANDIEGO.ORG is not assigned SKU: posd:ENTERPRISEPACK. Adding SKU with Base Options
+posd:EXCHANGEENTERPRISE
+posd:EXCHANGEENTERPRISE
+posd:EXCHANGEENTERPRISE,posd:STANDARDPACK
+posd:EXCHANGEENTERPRISE
+posd:STANDARDPACK
+hhicks@PORTOFSANDIEGO.ORG is assigned the SKU(s): posd:EXCHANGEENTERPRISE posd:STANDARDPACK. REMOVING SKU(s) now
+hhicks@PORTOFSANDIEGO.ORG is not assigned SKU: posd:ENTERPRISEPACK. Adding SKU with Base Options
+posd:EXCHANGEENTERPRISE
+posd:EXCHANGEENTERPRISE
+posd:EXCHANGEENTERPRISE,posd:STANDARDPACK
+posd:EXCHANGEENTERPRISE
+posd:STANDARDPACK
+hirizarr@portofsandiego.org is assigned the SKU(s): posd:EXCHANGEENTERPRISE posd:STANDARDPACK. REMOVING SKU(s) now
+hirizarr@portofsandiego.org is not assigned SKU: posd:ENTERPRISEPACK. Adding SKU with Base Options
+posd:EXCHANGEENTERPRISE
+posd:EXCHANGEENTERPRISE
+posd:EXCHANGEENTERPRISE,posd:STANDARDPACK
+posd:EXCHANGEENTERPRISE
+posd:STANDARDPACK
+jmededov@portofsandiego.org is assigned the SKU(s): posd:EXCHANGEENTERPRISE posd:STANDARDPACK. REMOVING SKU(s) now
+jmededov@portofsandiego.org is not assigned SKU: posd:ENTERPRISEPACK. Adding SKU with Base Options
+jbenedict@PORTOFSANDIEGO.ORG is not assigned any of the SKUs: posd:EXCHANGEENTERPRISE posd:SHAREPOINTENTERPRISE posd:STANDARDWOFFPACK posd:STANDARDPACK. No need to remove
+jbenedict@PORTOFSANDIEGO.ORG is already assigned SKU: posd:ENTERPRISEPACK. Modifying options if necessary.
+PS C:\scripts> cls
+PS C:\scripts> $gd = Get-MsolUser -SearchString gdixon
+PS C:\scripts> $gd
+
+UserPrincipalName         DisplayName isLicensed
+-----------------         ----------- ----------
+gdixon@PORTOFSANDIEGO.ORG Greg Dixon  True
+
+
+PS C:\scripts> $gd | Set-365License
+Transcript started, output file is .\Office365_PowerShell.txt
+posd:EXCHANGEENTERPRISE
+posd:EXCHANGEENTERPRISE
+posd:EXCHANGEENTERPRISE,posd:SHAREPOINTENTERPRISE
+posd:EXCHANGEENTERPRISE
+posd:SHAREPOINTENTERPRISE
+posd:EXCHANGEENTERPRISE,posd:SHAREPOINTENTERPRISE,posd:STANDARDPACK
+posd:EXCHANGEENTERPRISE
+posd:SHAREPOINTENTERPRISE
+posd:STANDARDPACK
+gdixon@PORTOFSANDIEGO.ORG is assigned the SKU(s): posd:EXCHANGEENTERPRISE posd:SHAREPOINTENTERPRISE posd:STANDARDPACK. REMOVING SKU(s) now
+gdixon@PORTOFSANDIEGO.ORG is already assigned SKU: posd:ENTERPRISEPACK. Modifying options if necessary.
+PS C:\scripts> $c = Get-MsolUser -SearchString cjoslin@portofsandiego.org
+PS C:\scripts> $c
+
+UserPrincipalName          DisplayName    isLicensed
+-----------------          -----------    ----------
+cjoslin@portofsandiego.org Chrissy Joslin True
+
+
+PS C:\scripts> $c | Set-365License
+Transcript started, output file is .\Office365_PowerShell.txt
+posd:EXCHANGEENTERPRISE
+posd:EXCHANGEENTERPRISE
+posd:EXCHANGEENTERPRISE,posd:SHAREPOINTENTERPRISE
+posd:EXCHANGEENTERPRISE
+posd:SHAREPOINTENTERPRISE
+posd:EXCHANGEENTERPRISE,posd:SHAREPOINTENTERPRISE,posd:STANDARDPACK
+posd:EXCHANGEENTERPRISE
+posd:SHAREPOINTENTERPRISE
+posd:STANDARDPACK
+cjoslin@portofsandiego.org is assigned the SKU(s): posd:EXCHANGEENTERPRISE posd:SHAREPOINTENTERPRISE posd:STANDARDPACK. REMOVING SKU(s) now
+cjoslin@portofsandiego.org is already assigned SKU: posd:ENTERPRISEPACK. Modifying options if necessary.
+PS C:\scripts> Get-MsolUser
+>> TerminatingError(): "The pipeline has been stopped."
+>> TerminatingError(): "The pipeline has been stopped."
+PS C:\scripts> Get-PSSession
+
+ Id Name            ComputerName    ComputerType    State         ConfigurationName    Availability
+ -- ----            ------------    ------------    -----         -----------------    ------------
+  1 Session1        outlook.offi... RemoteMachine   Opened        Microsoft.Exchange      Available
+
+
+PS C:\scripts> Get-Command "mail"
+Get-Command : The term 'mail' is not recognized as the name of a cmdlet, function, script file, or operable program. 
+Check the spelling of the name, or if a path was included, verify that the path is correct and try again.
+At line:1 char:1
++ Get-Command "mail"
++ ~~~~~~~~~~~~~~~~~~
+    + CategoryInfo          : ObjectNotFound: (mail:String) [Get-Command], CommandNotFoundException
+    + FullyQualifiedErrorId : CommandNotFoundException,Microsoft.PowerShell.Commands.GetCommandCommand
+Get-Command : The term 'mail' is not recognized as the name of a cmdlet, function, script file, or
+operable program. Check the spelling of the name, or if a path was included, verify that the path
+is correct and try again.
+At line:1 char:1
++ Get-Command "mail"
++ ~~~~~~~~~~~~~~~~~~
+    + CategoryInfo          : ObjectNotFound: (mail:String) [Get-Command], CommandNotFoundExceptio
+   n
+    + FullyQualifiedErrorId : CommandNotFoundException,Microsoft.PowerShell.Commands.GetCommandCom
+   mand
+
+PS C:\scripts> Get-Command -Syntax "mail"
+Get-Command : The term 'mail' is not recognized as the name of a cmdlet, function, script file, or operable program. 
+Check the spelling of the name, or if a path was included, verify that the path is correct and try again.
+At line:1 char:1
++ Get-Command -Syntax "mail"
++ ~~~~~~~~~~~~~~~~~~~~~~~~~~
+    + CategoryInfo          : ObjectNotFound: (mail:String) [Get-Command], CommandNotFoundException
+    + FullyQualifiedErrorId : CommandNotFoundException,Microsoft.PowerShell.Commands.GetCommandCommand
+Get-Command : The term 'mail' is not recognized as the name of a cmdlet, function, script file, or
+operable program. Check the spelling of the name, or if a path was included, verify that the path
+is correct and try again.
+At line:1 char:1
++ Get-Command -Syntax "mail"
++ ~~~~~~~~~~~~~~~~~~~~~~~~~~
+    + CategoryInfo          : ObjectNotFound: (mail:String) [Get-Command], CommandNotFoundExceptio
+   n
+    + FullyQualifiedErrorId : CommandNotFoundException,Microsoft.PowerShell.Commands.GetCommandCom
+   mand
+
+PS C:\scripts> Get-Command -Syntax "msol"
+Get-Command : The term 'msol' is not recognized as the name of a cmdlet, function, script file, or operable program. 
+Check the spelling of the name, or if a path was included, verify that the path is correct and try again.
+At line:1 char:1
++ Get-Command -Syntax "msol"
++ ~~~~~~~~~~~~~~~~~~~~~~~~~~
+    + CategoryInfo          : ObjectNotFound: (msol:String) [Get-Command], CommandNotFoundException
+    + FullyQualifiedErrorId : CommandNotFoundException,Microsoft.PowerShell.Commands.GetCommandCommand
+Get-Command : The term 'msol' is not recognized as the name of a cmdlet, function, script file, or
+operable program. Check the spelling of the name, or if a path was included, verify that the path
+is correct and try again.
+At line:1 char:1
++ Get-Command -Syntax "msol"
++ ~~~~~~~~~~~~~~~~~~~~~~~~~~
+    + CategoryInfo          : ObjectNotFound: (msol:String) [Get-Command], CommandNotFoundExceptio
+   n
+    + FullyQualifiedErrorId : CommandNotFoundException,Microsoft.PowerShell.Commands.GetCommandCom
+   mand
+
+PS C:\scripts> Get-Command  msol
+Get-Command : The term 'msol' is not recognized as the name of a cmdlet, function, script file, or operable program. 
+Check the spelling of the name, or if a path was included, verify that the path is correct and try again.
+At line:1 char:1
++ Get-Command  msol
++ ~~~~~~~~~~~~~~~~~
+    + CategoryInfo          : ObjectNotFound: (msol:String) [Get-Command], CommandNotFoundException
+    + FullyQualifiedErrorId : CommandNotFoundException,Microsoft.PowerShell.Commands.GetCommandCommand
+Get-Command : The term 'msol' is not recognized as the name of a cmdlet, function, script file, or
+operable program. Check the spelling of the name, or if a path was included, verify that the path
+is correct and try again.
+At line:1 char:1
++ Get-Command  msol
++ ~~~~~~~~~~~~~~~~~
+    + CategoryInfo          : ObjectNotFound: (msol:String) [Get-Command], CommandNotFoundExceptio
+   n
+    + FullyQualifiedErrorId : CommandNotFoundException,Microsoft.PowerShell.Commands.GetCommandCom
+   mand
+
+PS C:\scripts> get-mailbox
+get-mailbox : The term 'get-mailbox' is not recognized as the name of a cmdlet, function, script file, or operable 
+program. Check the spelling of the name, or if a path was included, verify that the path is correct and try again.
+At line:1 char:1
++ get-mailbox
++ ~~~~~~~~~~~
+    + CategoryInfo          : ObjectNotFound: (get-mailbox:String) [], CommandNotFoundException
+    + FullyQualifiedErrorId : CommandNotFoundException
+get-mailbox : The term 'get-mailbox' is not recognized as the name of a cmdlet, function, script
+file, or operable program. Check the spelling of the name, or if a path was included, verify that
+the path is correct and try again.
+At line:1 char:1
++ get-mailbox
++ ~~~~~~~~~~~
+    + CategoryInfo          : ObjectNotFound: (get-mailbox:String) [], CommandNotFoundException
+    + FullyQualifiedErrorId : CommandNotFoundException
+
+PS C:\scripts> Connect-Office365
+PS C:\scripts> .\Connect_SENT.ps1
+Transcript started, output file is C:\scripts\sent.txt
+WARNING: Your connection has been redirected to the following URI: "https://outlook.office365.com/PowerShell-LiveID?PSVersion=5.1.14393.206 "
+WARNING: The names of some imported commands from the module 'tmp_vle1ncnp.5wx' include unapproved verbs that might make them less discoverable. To find the commands with unapproved verbs, run the Import-Module command again with the Verbose parameter. For a list of approved verbs, type Get-Verb.
+
+ModuleType Version    Name                                ExportedCommands
+---------- -------    ----                                ----------------
+Script     1.0        tmp_vle1ncnp.5wx                    {Add-AvailabilityAddressSpace, Add-Dis...
+
+
+PS C:\scripts> Get-MailboxPlan | FL
+
+
+RunspaceId                            : bc252cb7-dc4a-4577-bfe1-e3a094b9bbdf
+IsDefault                             : False
+IsDefaultForPreviousVersion           : False
+MailboxPlanRelease                    : AllReleases
+IsPilotMailboxPlan                    : False
+MailboxPlanIndex                      : 1
+HiddenFromAddressListsEnabled         : False
+Database                              : Databases
+MailboxProvisioningConstraint         :
+MailboxRegion                         :
+MailboxRegionLastUpdateTime           :
+MessageCopyForSentAsEnabled           : False
+MessageCopyForSendOnBehalfEnabled     : False
+MailboxProvisioningPreferences        : {}
+UseDatabaseRetentionDefaults          : False
+RetainDeletedItemsUntilBackup         : False
+DeliverToMailboxAndForward            : False
+IsExcludedFromServingHierarchy        : False
+IsHierarchyReady                      : True
+IsHierarchySyncEnabled                : True
+HasSnackyAppData                      : False
+LitigationHoldEnabled                 : False
+SingleItemRecoveryEnabled             : True
+RetentionHoldEnabled                  : False
+EndDateForRetentionHold               :
+StartDateForRetentionHold             :
+RetentionComment                      :
+RetentionUrl                          :
+LitigationHoldDate                    :
+LitigationHoldOwner                   :
+ElcProcessingDisabled                 : False
+ComplianceTagHoldApplied              : False
+WasInactiveMailbox                    : False
+InactiveMailboxRetireTime             :
+OrphanSoftDeleteTrackingTime          :
+LitigationHoldDuration                : Unlimited
+ManagedFolderMailboxPolicy            :
+RetentionPolicy                       : Default MRM Policy
+AddressBookPolicy                     :
+CalendarRepairDisabled                : False
+ExchangeGuid                          : 6cb90c07-ac11-4c5d-8baf-3a0705e6ff05
+MailboxContainerGuid                  :
+UnifiedMailbox                        :
+MailboxLocations                      : {1;6cb90c07-ac11-4c5d-8baf-3a0705e6ff05;Primary;namprd02.pr
+                                        od.outlook.com;52f63a0e-3125-4368-942f-25618476401a}
+AggregatedMailboxGuids                : {}
+ExchangeSecurityDescriptor            : System.Security.AccessControl.RawSecurityDescriptor
+ExchangeUserAccountControl            : AccountDisabled
+AdminDisplayVersion                   :
+MessageTrackingReadStatusEnabled      : True
+ExternalOofOptions                    : External
+RetainDeletedItemsFor                 : 14.00:00:00
+IsMailboxEnabled                      : True
+OfflineAddressBook                    :
+ProhibitSendQuota                     : 49.5 GB (53,150,220,288 bytes)
+ProhibitSendReceiveQuota              : 50 GB (53,687,091,200 bytes)
+RecoverableItemsQuota                 : 30 GB (32,212,254,720 bytes)
+RecoverableItemsWarningQuota          : 20 GB (21,474,836,480 bytes)
+CalendarLoggingQuota                  : 6 GB (6,442,450,944 bytes)
+DowngradeHighPriorityMessagesEnabled  : False
+ProtocolSettings                      : {RemotePowerShell§1, IMAP4§1§§§§§§§§§§§§,
+                                        MAPI§1§0§§§§§§§§, POP3§1§§§§§§§§§§§§1}
+RecipientLimits                       : 500
+ImListMigrationCompleted              : False
+SiloName                              :
+IsResource                            : False
+IsLinked                              : False
+IsShared                              : False
+IsRootPublicFolderMailbox             : False
+ResetPasswordOnNextLogon              : False
+ResourceType                          :
+RoomMailboxAccountEnabled             :
+SCLDeleteThreshold                    :
+SCLDeleteEnabled                      :
+SCLRejectThreshold                    :
+SCLRejectEnabled                      :
+SCLQuarantineThreshold                :
+SCLQuarantineEnabled                  :
+SCLJunkThreshold                      :
+SCLJunkEnabled                        :
+AntispamBypassEnabled                 : False
+ServerLegacyDN                        : /o=ExchangeLabs/ou=Exchange Administrative Group (FYDIBOHF2
+                                        3SPDLT)/cn=Servers/cn=73BCAADF75B34A4781FDCDA446B76E7C
+ServerName                            : 73bcaadf75b34a4781fdcda446b76e7c
+UseDatabaseQuotaDefaults              : False
+IssueWarningQuota                     : 49 GB (52,613,349,376 bytes)
+RulesQuota                            : 64 KB (65,536 bytes)
+UserPrincipalName                     : ExchangeOnline-0f3b6474-4a3a-40da-bed1-f8b87fd2dfb7@posd.on
+                                        microsoft.com
+UMEnabled                             : False
+MaxSafeSenders                        :
+MaxBlockedSenders                     :
+NetID                                 :
+ReconciliationId                      :
+ThrottlingPolicy                      :
+RoleAssignmentPolicy                  : Default Role Assignment Policy
+DefaultPublicFolderMailbox            :
+EffectivePublicFolderMailbox          :
+SharingPolicy                         :
+RemoteAccountPolicy                   :
+MailboxPlan                           :
+ArchiveDatabase                       :
+ArchiveGuid                           : 00000000-0000-0000-0000-000000000000
+ArchiveName                           : {}
+JournalArchiveAddress                 :
+ArchiveQuota                          : 50 GB (53,687,091,200 bytes)
+ArchiveWarningQuota                   : 45 GB (48,318,382,080 bytes)
+ArchiveDomain                         :
+ArchiveStatus                         : None
+ArchiveState                          : None
+AutoExpandingArchiveEnabled           : False
+DisabledMailboxLocations              : False
+RemoteRecipientType                   : None
+DisabledArchiveDatabase               :
+DisabledArchiveGuid                   : 00000000-0000-0000-0000-000000000000
+QueryBaseDN                           :
+QueryBaseDNRestrictionEnabled         : False
+MailboxMoveTargetMDB                  :
+MailboxMoveSourceMDB                  :
+MailboxMoveFlags                      : None
+MailboxMoveRemoteHostName             :
+MailboxMoveBatchName                  :
+MailboxMoveStatus                     : None
+MailboxRelease                        :
+ArchiveRelease                        :
+IsPersonToPersonTextMessagingEnabled  : False
+IsMachineToPersonTextMessagingEnabled : False
+UserSMimeCertificate                  : {}
+UserCertificate                       : {}
+CalendarVersionStoreDisabled          : False
+PersistedCapabilities                 : {BPOS_S_Standard}
+AuditEnabled                          : False
+AuditLogAgeLimit                      : 90.00:00:00
+AuditAdmin                            : {Update, Move, MoveToDeletedItems, SoftDelete...}
+AuditDelegate                         : {Update, SoftDelete, HardDelete, SendAs...}
+AuditOwner                            : {}
+WhenMailboxCreated                    :
+SourceAnchor                          :
+IsSoftDeletedByRemove                 : False
+IsSoftDeletedByDisable                : False
+IsInactiveMailbox                     : False
+IncludeInGarbageCollection            : False
+WhenSoftDeleted                       :
+InPlaceHolds                          : {}
+GeneratedOfflineAddressBooks          : {}
+AccountDisabled                       : True
+StsRefreshTokensValidFrom             :
+DataEncryptionPolicy                  :
+Extensions                            : {}
+HasPicture                            : False
+HasSpokenName                         : False
+IsDirSynced                           : False
+AddressListMembership                 : {}
+AdministrativeUnits                   : {}
+Alias                                 : ExchangeOnline-0f3b6474-4a3a-40da-bed1-f8b87fd2dfb7
+OrganizationalUnit                    : nampr02a007.prod.outlook.com/Microsoft Exchange Hosted
+                                        Organizations/posd.onmicrosoft.com
+CustomAttribute1                      :
+DisplayName                           : ExchangeOnline
+ExternalDirectoryObjectId             :
+LastExchangeChangedTime               :
+LegacyExchangeDN                      : /o=ExchangeLabs/ou=Exchange Administrative Group (FYDIBOHF2
+                                        3SPDLT)/cn=Recipients/cn=c2fc64f5f66e4684830c2df84868fc02-E
+                                        xchangeOnl
+MaxSendSize                           : 35 MB (36,700,160 bytes)
+MaxReceiveSize                        : 36 MB (37,748,736 bytes)
+ModeratedBy                           : {}
+PoliciesIncluded                      : {{26491cfc-9e50-4857-861b-0cb8df22b5d7},
+                                        ccba5f52-17de-44cb-84dd-177ac020f27e}
+PoliciesExcluded                      : {}
+EmailAddressPolicyEnabled             : True
+RecipientType                         : UserMailbox
+RecipientTypeDetails                  : MailboxPlan
+RequireSenderAuthenticationEnabled    : False
+Identity                              : ExchangeOnline-0f3b6474-4a3a-40da-bed1-f8b87fd2dfb7
+IsValid                               : True
+ExchangeVersion                       : 0.20 (15.0.0.0)
+Name                                  : ExchangeOnline-0f3b6474-4a3a-40da-bed1-f8b87fd2dfb7
+DistinguishedName                     : CN=ExchangeOnline-0f3b6474-4a3a-40da-bed1-f8b87fd2dfb7,OU=p
+                                        osd.onmicrosoft.com,OU=Microsoft Exchange Hosted
+                                        Organizations,DC=NAMPR02A007,DC=PROD,DC=OUTLOOK,DC=COM
+Guid                                  : db937f92-5f26-4c7c-a498-7bcecf208ae2
+ObjectCategory                        : NAMPR02A007.PROD.OUTLOOK.COM/Configuration/Schema/Person
+ObjectClass                           : {top, person, organizationalPerson, user}
+WhenChanged                           : 2/28/2017 6:33:49 AM
+WhenCreated                           : 2/28/2017 6:33:44 AM
+WhenChangedUTC                        : 2/28/2017 11:33:49 AM
+WhenCreatedUTC                        : 2/28/2017 11:33:44 AM
+OrganizationId                        : NAMPR02A007.PROD.OUTLOOK.COM/Microsoft Exchange Hosted
+                                        Organizations/posd.onmicrosoft.com - NAMPR02A007.PROD.OUTLO
+                                        OK.COM/ConfigurationUnits/posd.onmicrosoft.com/Configuratio
+                                        n
+Id                                    : ExchangeOnline-0f3b6474-4a3a-40da-bed1-f8b87fd2dfb7
+OriginatingServer                     : BY2PR02A007DC01.NAMPR02A007.PROD.OUTLOOK.COM
+ObjectState                           : Unchanged
+
+RunspaceId                            : bc252cb7-dc4a-4577-bfe1-e3a094b9bbdf
+IsDefault                             : False
+IsDefaultForPreviousVersion           : False
+MailboxPlanRelease                    : AllReleases
+IsPilotMailboxPlan                    : False
+MailboxPlanIndex                      : 0
+HiddenFromAddressListsEnabled         : False
+Database                              : Databases
+MailboxProvisioningConstraint         :
+MailboxRegion                         :
+MailboxRegionLastUpdateTime           :
+MessageCopyForSentAsEnabled           : False
+MessageCopyForSendOnBehalfEnabled     : False
+MailboxProvisioningPreferences        : {}
+UseDatabaseRetentionDefaults          : False
+RetainDeletedItemsUntilBackup         : False
+DeliverToMailboxAndForward            : False
+IsExcludedFromServingHierarchy        : False
+IsHierarchyReady                      : True
+IsHierarchySyncEnabled                : True
+HasSnackyAppData                      : False
+LitigationHoldEnabled                 : False
+SingleItemRecoveryEnabled             : True
+RetentionHoldEnabled                  : False
+EndDateForRetentionHold               :
+StartDateForRetentionHold             :
+RetentionComment                      :
+RetentionUrl                          :
+LitigationHoldDate                    :
+LitigationHoldOwner                   :
+ElcProcessingDisabled                 : False
+ComplianceTagHoldApplied              : False
+WasInactiveMailbox                    : False
+InactiveMailboxRetireTime             :
+OrphanSoftDeleteTrackingTime          :
+LitigationHoldDuration                : Unlimited
+ManagedFolderMailboxPolicy            :
+RetentionPolicy                       : Default MRM Policy
+AddressBookPolicy                     :
+CalendarRepairDisabled                : False
+ExchangeGuid                          : 4d9afa72-3731-4d23-a290-29fde35f1966
+MailboxContainerGuid                  :
+UnifiedMailbox                        :
+MailboxLocations                      : {1;4d9afa72-3731-4d23-a290-29fde35f1966;Primary;namprd02.pr
+                                        od.outlook.com;52f63a0e-3125-4368-942f-25618476401a}
+AggregatedMailboxGuids                : {}
+ExchangeSecurityDescriptor            : System.Security.AccessControl.RawSecurityDescriptor
+ExchangeUserAccountControl            : AccountDisabled
+AdminDisplayVersion                   :
+MessageTrackingReadStatusEnabled      : True
+ExternalOofOptions                    : External
+RetainDeletedItemsFor                 : 14.00:00:00
+IsMailboxEnabled                      : True
+OfflineAddressBook                    :
+ProhibitSendQuota                     : 1.979 GB (2,125,463,552 bytes)
+ProhibitSendReceiveQuota              : 2 GB (2,147,483,648 bytes)
+RecoverableItemsQuota                 : 30 GB (32,212,254,720 bytes)
+RecoverableItemsWarningQuota          : 20 GB (21,474,836,480 bytes)
+CalendarLoggingQuota                  : 6 GB (6,442,450,944 bytes)
+DowngradeHighPriorityMessagesEnabled  : False
+ProtocolSettings                      : {RemotePowerShell§1, IMAP4§0§§§§§§§§§§§§,
+                                        MAPI§0§0§§§§§§§§, POP3§1§§§§§§§§§§§§1}
+RecipientLimits                       : 500
+ImListMigrationCompleted              : False
+SiloName                              :
+IsResource                            : False
+IsLinked                              : False
+IsShared                              : False
+IsRootPublicFolderMailbox             : False
+ResetPasswordOnNextLogon              : False
+ResourceType                          :
+RoomMailboxAccountEnabled             :
+SCLDeleteThreshold                    :
+SCLDeleteEnabled                      :
+SCLRejectThreshold                    :
+SCLRejectEnabled                      :
+SCLQuarantineThreshold                :
+SCLQuarantineEnabled                  :
+SCLJunkThreshold                      :
+SCLJunkEnabled                        :
+AntispamBypassEnabled                 : False
+ServerLegacyDN                        : /o=ExchangeLabs/ou=Exchange Administrative Group (FYDIBOHF2
+                                        3SPDLT)/cn=Servers/cn=73BCAADF75B34A4781FDCDA446B76E7C
+ServerName                            : 73bcaadf75b34a4781fdcda446b76e7c
+UseDatabaseQuotaDefaults              : False
+IssueWarningQuota                     : 1.96 GB (2,104,492,032 bytes)
+RulesQuota                            : 64 KB (65,536 bytes)
+UserPrincipalName                     : ExchangeOnlineDeskless-ba7f49a7-9ca0-4192-877e-6f2927e4417b
+                                        @posd.onmicrosoft.com
+UMEnabled                             : False
+MaxSafeSenders                        :
+MaxBlockedSenders                     :
+NetID                                 :
+ReconciliationId                      :
+ThrottlingPolicy                      :
+RoleAssignmentPolicy                  : Default Role Assignment Policy
+DefaultPublicFolderMailbox            :
+EffectivePublicFolderMailbox          :
+SharingPolicy                         :
+RemoteAccountPolicy                   :
+MailboxPlan                           :
+ArchiveDatabase                       :
+ArchiveGuid                           : 00000000-0000-0000-0000-000000000000
+ArchiveName                           : {}
+JournalArchiveAddress                 :
+ArchiveQuota                          : 50 GB (53,687,091,200 bytes)
+ArchiveWarningQuota                   : 45 GB (48,318,382,080 bytes)
+ArchiveDomain                         :
+ArchiveStatus                         : None
+ArchiveState                          : None
+AutoExpandingArchiveEnabled           : False
+DisabledMailboxLocations              : False
+RemoteRecipientType                   : None
+DisabledArchiveDatabase               :
+DisabledArchiveGuid                   : 00000000-0000-0000-0000-000000000000
+QueryBaseDN                           :
+QueryBaseDNRestrictionEnabled         : False
+MailboxMoveTargetMDB                  :
+MailboxMoveSourceMDB                  :
+MailboxMoveFlags                      : None
+MailboxMoveRemoteHostName             :
+MailboxMoveBatchName                  :
+MailboxMoveStatus                     : None
+MailboxRelease                        :
+ArchiveRelease                        :
+IsPersonToPersonTextMessagingEnabled  : False
+IsMachineToPersonTextMessagingEnabled : False
+UserSMimeCertificate                  : {}
+UserCertificate                       : {}
+CalendarVersionStoreDisabled          : False
+PersistedCapabilities                 : {BPOS_S_Deskless}
+AuditEnabled                          : False
+AuditLogAgeLimit                      : 90.00:00:00
+AuditAdmin                            : {Update, Move, MoveToDeletedItems, SoftDelete...}
+AuditDelegate                         : {Update, SoftDelete, HardDelete, SendAs...}
+AuditOwner                            : {}
+WhenMailboxCreated                    :
+SourceAnchor                          :
+IsSoftDeletedByRemove                 : False
+IsSoftDeletedByDisable                : False
+IsInactiveMailbox                     : False
+IncludeInGarbageCollection            : False
+WhenSoftDeleted                       :
+InPlaceHolds                          : {}
+GeneratedOfflineAddressBooks          : {}
+AccountDisabled                       : True
+StsRefreshTokensValidFrom             :
+DataEncryptionPolicy                  :
+Extensions                            : {}
+HasPicture                            : False
+HasSpokenName                         : False
+IsDirSynced                           : False
+AddressListMembership                 : {}
+AdministrativeUnits                   : {}
+Alias                                 : ExchangeOnlineDeskless-ba7f49a7-9ca0-4192-877e-6f2927e4417b
+OrganizationalUnit                    : nampr02a007.prod.outlook.com/Microsoft Exchange Hosted
+                                        Organizations/posd.onmicrosoft.com
+CustomAttribute1                      :
+DisplayName                           : ExchangeOnlineDeskless
+ExternalDirectoryObjectId             :
+LastExchangeChangedTime               :
+LegacyExchangeDN                      : /o=ExchangeLabs/ou=Exchange Administrative Group (FYDIBOHF2
+                                        3SPDLT)/cn=Recipients/cn=fa11aff920f444fbbdbc4b2f540cf5ae-E
+                                        xchangeOnl
+MaxSendSize                           : 35 MB (36,700,160 bytes)
+MaxReceiveSize                        : 36 MB (37,748,736 bytes)
+ModeratedBy                           : {}
+PoliciesIncluded                      : {{26491cfc-9e50-4857-861b-0cb8df22b5d7},
+                                        ccba5f52-17de-44cb-84dd-177ac020f27e}
+PoliciesExcluded                      : {}
+EmailAddressPolicyEnabled             : True
+RecipientType                         : UserMailbox
+RecipientTypeDetails                  : MailboxPlan
+RequireSenderAuthenticationEnabled    : False
+Identity                              : ExchangeOnlineDeskless-ba7f49a7-9ca0-4192-877e-6f2927e4417b
+IsValid                               : True
+ExchangeVersion                       : 0.20 (15.0.0.0)
+Name                                  : ExchangeOnlineDeskless-ba7f49a7-9ca0-4192-877e-6f2927e4417b
+DistinguishedName                     : CN=ExchangeOnlineDeskless-ba7f49a7-9ca0-4192-877e-6f2927e44
+                                        17b,OU=posd.onmicrosoft.com,OU=Microsoft Exchange Hosted
+                                        Organizations,DC=NAMPR02A007,DC=PROD,DC=OUTLOOK,DC=COM
+Guid                                  : 6cac95ab-df3e-42fd-9e68-15ed56d0aa6b
+ObjectCategory                        : NAMPR02A007.PROD.OUTLOOK.COM/Configuration/Schema/Person
+ObjectClass                           : {top, person, organizationalPerson, user}
+WhenChanged                           : 2/28/2017 6:33:53 AM
+WhenCreated                           : 2/28/2017 6:33:50 AM
+WhenChangedUTC                        : 2/28/2017 11:33:53 AM
+WhenCreatedUTC                        : 2/28/2017 11:33:50 AM
+OrganizationId                        : NAMPR02A007.PROD.OUTLOOK.COM/Microsoft Exchange Hosted
+                                        Organizations/posd.onmicrosoft.com - NAMPR02A007.PROD.OUTLO
+                                        OK.COM/ConfigurationUnits/posd.onmicrosoft.com/Configuratio
+                                        n
+Id                                    : ExchangeOnlineDeskless-ba7f49a7-9ca0-4192-877e-6f2927e4417b
+OriginatingServer                     : BY2PR02A007DC01.NAMPR02A007.PROD.OUTLOOK.COM
+ObjectState                           : Unchanged
+
+RunspaceId                            : bc252cb7-dc4a-4577-bfe1-e3a094b9bbdf
+IsDefault                             : True
+IsDefaultForPreviousVersion           : False
+MailboxPlanRelease                    : AllReleases
+IsPilotMailboxPlan                    : False
+MailboxPlanIndex                      : 2
+HiddenFromAddressListsEnabled         : False
+Database                              : Databases
+MailboxProvisioningConstraint         :
+MailboxRegion                         :
+MailboxRegionLastUpdateTime           :
+MessageCopyForSentAsEnabled           : False
+MessageCopyForSendOnBehalfEnabled     : False
+MailboxProvisioningPreferences        : {}
+UseDatabaseRetentionDefaults          : False
+RetainDeletedItemsUntilBackup         : False
+DeliverToMailboxAndForward            : False
+IsExcludedFromServingHierarchy        : False
+IsHierarchyReady                      : True
+IsHierarchySyncEnabled                : True
+HasSnackyAppData                      : False
+LitigationHoldEnabled                 : False
+SingleItemRecoveryEnabled             : True
+RetentionHoldEnabled                  : False
+EndDateForRetentionHold               :
+StartDateForRetentionHold             :
+RetentionComment                      :
+RetentionUrl                          :
+LitigationHoldDate                    :
+LitigationHoldOwner                   :
+ElcProcessingDisabled                 : False
+ComplianceTagHoldApplied              : False
+WasInactiveMailbox                    : False
+InactiveMailboxRetireTime             :
+OrphanSoftDeleteTrackingTime          :
+LitigationHoldDuration                : Unlimited
+ManagedFolderMailboxPolicy            :
+RetentionPolicy                       : Default MRM Policy
+AddressBookPolicy                     :
+CalendarRepairDisabled                : False
+ExchangeGuid                          : 785ae528-2f4e-4ecf-88f4-52e881547977
+MailboxContainerGuid                  :
+UnifiedMailbox                        :
+MailboxLocations                      : {1;785ae528-2f4e-4ecf-88f4-52e881547977;Primary;namprd02.pr
+                                        od.outlook.com;52f63a0e-3125-4368-942f-25618476401a}
+AggregatedMailboxGuids                : {}
+ExchangeSecurityDescriptor            : System.Security.AccessControl.RawSecurityDescriptor
+ExchangeUserAccountControl            : AccountDisabled
+AdminDisplayVersion                   :
+MessageTrackingReadStatusEnabled      : True
+ExternalOofOptions                    : External
+RetainDeletedItemsFor                 : 14.00:00:00
+IsMailboxEnabled                      : True
+OfflineAddressBook                    :
+ProhibitSendQuota                     : 99 GB (106,300,440,576 bytes)
+ProhibitSendReceiveQuota              : 100 GB (107,374,182,400 bytes)
+RecoverableItemsQuota                 : 30 GB (32,212,254,720 bytes)
+RecoverableItemsWarningQuota          : 20 GB (21,474,836,480 bytes)
+CalendarLoggingQuota                  : 6 GB (6,442,450,944 bytes)
+DowngradeHighPriorityMessagesEnabled  : False
+ProtocolSettings                      : {RemotePowerShell§1, IMAP4§1§§§§§§§§§§§§,
+                                        MAPI§1§0§§§§§§§§, POP3§1§§§§§§§§§§§§1}
+RecipientLimits                       : 500
+ImListMigrationCompleted              : False
+SiloName                              :
+IsResource                            : False
+IsLinked                              : False
+IsShared                              : False
+IsRootPublicFolderMailbox             : False
+ResetPasswordOnNextLogon              : False
+ResourceType                          :
+RoomMailboxAccountEnabled             :
+SCLDeleteThreshold                    :
+SCLDeleteEnabled                      :
+SCLRejectThreshold                    :
+SCLRejectEnabled                      :
+SCLQuarantineThreshold                :
+SCLQuarantineEnabled                  :
+SCLJunkThreshold                      :
+SCLJunkEnabled                        :
+AntispamBypassEnabled                 : False
+ServerLegacyDN                        : /o=ExchangeLabs/ou=Exchange Administrative Group (FYDIBOHF2
+                                        3SPDLT)/cn=Servers/cn=73BCAADF75B34A4781FDCDA446B76E7C
+ServerName                            : 73bcaadf75b34a4781fdcda446b76e7c
+UseDatabaseQuotaDefaults              : False
+IssueWarningQuota                     : 98 GB (105,226,698,752 bytes)
+RulesQuota                            : 64 KB (65,536 bytes)
+UserPrincipalName                     : ExchangeOnlineEnterprise-bd617e63-9c19-4441-9d67-1a8716059f
+                                        99@posd.onmicrosoft.com
+UMEnabled                             : False
+MaxSafeSenders                        :
+MaxBlockedSenders                     :
+NetID                                 :
+ReconciliationId                      :
+ThrottlingPolicy                      :
+RoleAssignmentPolicy                  : Default Role Assignment Policy
+DefaultPublicFolderMailbox            :
+EffectivePublicFolderMailbox          :
+SharingPolicy                         :
+RemoteAccountPolicy                   :
+MailboxPlan                           :
+ArchiveDatabase                       :
+ArchiveGuid                           : 00000000-0000-0000-0000-000000000000
+ArchiveName                           : {}
+JournalArchiveAddress                 :
+ArchiveQuota                          : 100 GB (107,374,182,400 bytes)
+ArchiveWarningQuota                   : 90 GB (96,636,764,160 bytes)
+ArchiveDomain                         :
+ArchiveStatus                         : None
+ArchiveState                          : None
+AutoExpandingArchiveEnabled           : False
+DisabledMailboxLocations              : False
+RemoteRecipientType                   : None
+DisabledArchiveDatabase               :
+DisabledArchiveGuid                   : 00000000-0000-0000-0000-000000000000
+QueryBaseDN                           :
+QueryBaseDNRestrictionEnabled         : False
+MailboxMoveTargetMDB                  :
+MailboxMoveSourceMDB                  :
+MailboxMoveFlags                      : None
+MailboxMoveRemoteHostName             :
+MailboxMoveBatchName                  :
+MailboxMoveStatus                     : None
+MailboxRelease                        :
+ArchiveRelease                        :
+IsPersonToPersonTextMessagingEnabled  : False
+IsMachineToPersonTextMessagingEnabled : False
+UserSMimeCertificate                  : {}
+UserCertificate                       : {}
+CalendarVersionStoreDisabled          : False
+PersistedCapabilities                 : {BPOS_S_Enterprise}
+AuditEnabled                          : False
+AuditLogAgeLimit                      : 90.00:00:00
+AuditAdmin                            : {Update, Move, MoveToDeletedItems, SoftDelete...}
+AuditDelegate                         : {Update, SoftDelete, HardDelete, SendAs...}
+AuditOwner                            : {}
+WhenMailboxCreated                    :
+SourceAnchor                          :
+IsSoftDeletedByRemove                 : False
+IsSoftDeletedByDisable                : False
+IsInactiveMailbox                     : False
+IncludeInGarbageCollection            : False
+WhenSoftDeleted                       :
+InPlaceHolds                          : {}
+GeneratedOfflineAddressBooks          : {}
+AccountDisabled                       : True
+StsRefreshTokensValidFrom             :
+DataEncryptionPolicy                  :
+Extensions                            : {}
+HasPicture                            : False
+HasSpokenName                         : False
+IsDirSynced                           : False
+AddressListMembership                 : {}
+AdministrativeUnits                   : {}
+Alias                                 : ExchangeOnlineEnterprise-bd617e63-9c19-4441-9d67-1a8716059f
+                                        99
+OrganizationalUnit                    : nampr02a007.prod.outlook.com/Microsoft Exchange Hosted
+                                        Organizations/posd.onmicrosoft.com
+CustomAttribute1                      :
+DisplayName                           : ExchangeOnlineEnterprise
+ExternalDirectoryObjectId             :
+LastExchangeChangedTime               :
+LegacyExchangeDN                      : /o=ExchangeLabs/ou=Exchange Administrative Group (FYDIBOHF2
+                                        3SPDLT)/cn=Recipients/cn=fef915c97fa14f45bcc5c629b88acb89-E
+                                        xchangeOnl
+MaxSendSize                           : 35 MB (36,700,160 bytes)
+MaxReceiveSize                        : 36 MB (37,748,736 bytes)
+ModeratedBy                           : {}
+PoliciesIncluded                      : {{26491cfc-9e50-4857-861b-0cb8df22b5d7},
+                                        ccba5f52-17de-44cb-84dd-177ac020f27e}
+PoliciesExcluded                      : {}
+EmailAddressPolicyEnabled             : True
+RecipientType                         : UserMailbox
+RecipientTypeDetails                  : MailboxPlan
+RequireSenderAuthenticationEnabled    : False
+Identity                              : ExchangeOnlineEnterprise-bd617e63-9c19-4441-9d67-1a8716059f
+                                        99
+IsValid                               : True
+ExchangeVersion                       : 0.20 (15.0.0.0)
+Name                                  : ExchangeOnlineEnterprise-bd617e63-9c19-4441-9d67-1a8716059f
+                                        99
+DistinguishedName                     : CN=ExchangeOnlineEnterprise-bd617e63-9c19-4441-9d67-1a87160
+                                        59f99,OU=posd.onmicrosoft.com,OU=Microsoft Exchange Hosted
+                                        Organizations,DC=NAMPR02A007,DC=PROD,DC=OUTLOOK,DC=COM
+Guid                                  : 889080d8-f075-43d6-88f2-55a2143cb967
+ObjectCategory                        : NAMPR02A007.PROD.OUTLOOK.COM/Configuration/Schema/Person
+ObjectClass                           : {top, person, organizationalPerson, user}
+WhenChanged                           : 2/28/2017 6:33:56 AM
+WhenCreated                           : 2/28/2017 6:33:53 AM
+WhenChangedUTC                        : 2/28/2017 11:33:56 AM
+WhenCreatedUTC                        : 2/28/2017 11:33:53 AM
+OrganizationId                        : NAMPR02A007.PROD.OUTLOOK.COM/Microsoft Exchange Hosted
+                                        Organizations/posd.onmicrosoft.com - NAMPR02A007.PROD.OUTLO
+                                        OK.COM/ConfigurationUnits/posd.onmicrosoft.com/Configuratio
+                                        n
+Id                                    : ExchangeOnlineEnterprise-bd617e63-9c19-4441-9d67-1a8716059f
+                                        99
+OriginatingServer                     : BY2PR02A007DC01.NAMPR02A007.PROD.OUTLOOK.COM
+ObjectState                           : Unchanged
+
+RunspaceId                            : bc252cb7-dc4a-4577-bfe1-e3a094b9bbdf
+IsDefault                             : False
+IsDefaultForPreviousVersion           : False
+MailboxPlanRelease                    : AllReleases
+IsPilotMailboxPlan                    : False
+MailboxPlanIndex                      : 3
+HiddenFromAddressListsEnabled         : False
+Database                              : Databases
+MailboxProvisioningConstraint         :
+MailboxRegion                         :
+MailboxRegionLastUpdateTime           :
+MessageCopyForSentAsEnabled           : False
+MessageCopyForSendOnBehalfEnabled     : False
+MailboxProvisioningPreferences        : {}
+UseDatabaseRetentionDefaults          : False
+RetainDeletedItemsUntilBackup         : False
+DeliverToMailboxAndForward            : False
+IsExcludedFromServingHierarchy        : False
+IsHierarchyReady                      : True
+IsHierarchySyncEnabled                : True
+HasSnackyAppData                      : False
+LitigationHoldEnabled                 : False
+SingleItemRecoveryEnabled             : True
+RetentionHoldEnabled                  : False
+EndDateForRetentionHold               :
+StartDateForRetentionHold             :
+RetentionComment                      :
+RetentionUrl                          :
+LitigationHoldDate                    :
+LitigationHoldOwner                   :
+ElcProcessingDisabled                 : False
+ComplianceTagHoldApplied              : False
+WasInactiveMailbox                    : False
+InactiveMailboxRetireTime             :
+OrphanSoftDeleteTrackingTime          :
+LitigationHoldDuration                : Unlimited
+ManagedFolderMailboxPolicy            :
+RetentionPolicy                       : Default MRM Policy
+AddressBookPolicy                     :
+CalendarRepairDisabled                : False
+ExchangeGuid                          : b294af61-cbc8-4949-bd7a-832ca5db825c
+MailboxContainerGuid                  :
+UnifiedMailbox                        :
+MailboxLocations                      : {1;b294af61-cbc8-4949-bd7a-832ca5db825c;Primary;namprd02.pr
+                                        od.outlook.com;52f63a0e-3125-4368-942f-25618476401a}
+AggregatedMailboxGuids                : {}
+ExchangeSecurityDescriptor            : System.Security.AccessControl.RawSecurityDescriptor
+ExchangeUserAccountControl            : AccountDisabled
+AdminDisplayVersion                   :
+MessageTrackingReadStatusEnabled      : True
+ExternalOofOptions                    : External
+RetainDeletedItemsFor                 : 14.00:00:00
+IsMailboxEnabled                      : True
+OfflineAddressBook                    :
+ProhibitSendQuota                     : 99 GB (106,300,440,576 bytes)
+ProhibitSendReceiveQuota              : 100 GB (107,374,182,400 bytes)
+RecoverableItemsQuota                 : 30 GB (32,212,254,720 bytes)
+RecoverableItemsWarningQuota          : 20 GB (21,474,836,480 bytes)
+CalendarLoggingQuota                  : 6 GB (6,442,450,944 bytes)
+DowngradeHighPriorityMessagesEnabled  : False
+ProtocolSettings                      : {RemotePowerShell§1, IMAP4§1§§§§§§§§§§§§,
+                                        POP3§1§§§§§§§§§§§§1, MAPI§1§0§§§§§§§§}
+RecipientLimits                       : 500
+ImListMigrationCompleted              : False
+SiloName                              :
+IsResource                            : False
+IsLinked                              : False
+IsShared                              : False
+IsRootPublicFolderMailbox             : False
+ResetPasswordOnNextLogon              : False
+ResourceType                          :
+RoomMailboxAccountEnabled             :
+SCLDeleteThreshold                    :
+SCLDeleteEnabled                      :
+SCLRejectThreshold                    :
+SCLRejectEnabled                      :
+SCLQuarantineThreshold                :
+SCLQuarantineEnabled                  :
+SCLJunkThreshold                      :
+SCLJunkEnabled                        :
+AntispamBypassEnabled                 : False
+ServerLegacyDN                        : /o=ExchangeLabs/ou=Exchange Administrative Group (FYDIBOHF2
+                                        3SPDLT)/cn=Servers/cn=73BCAADF75B34A4781FDCDA446B76E7C
+ServerName                            : 73bcaadf75b34a4781fdcda446b76e7c
+UseDatabaseQuotaDefaults              : True
+IssueWarningQuota                     : 98 GB (105,226,698,752 bytes)
+RulesQuota                            : 256 KB (262,144 bytes)
+UserPrincipalName                     : ExchangeOnlineEssentials-f9e5ddeb-06bf-45be-8943-7667105d75
+                                        23@posd.onmicrosoft.com
+UMEnabled                             : False
+MaxSafeSenders                        :
+MaxBlockedSenders                     :
+NetID                                 :
+ReconciliationId                      :
+ThrottlingPolicy                      :
+RoleAssignmentPolicy                  : Default Role Assignment Policy
+DefaultPublicFolderMailbox            :
+EffectivePublicFolderMailbox          :
+SharingPolicy                         :
+RemoteAccountPolicy                   :
+MailboxPlan                           :
+ArchiveDatabase                       :
+ArchiveGuid                           : 00000000-0000-0000-0000-000000000000
+ArchiveName                           : {}
+JournalArchiveAddress                 :
+ArchiveQuota                          : 100 GB (107,374,182,400 bytes)
+ArchiveWarningQuota                   : 90 GB (96,636,764,160 bytes)
+ArchiveDomain                         :
+ArchiveStatus                         : None
+ArchiveState                          : None
+AutoExpandingArchiveEnabled           : False
+DisabledMailboxLocations              : False
+RemoteRecipientType                   : None
+DisabledArchiveDatabase               :
+DisabledArchiveGuid                   : 00000000-0000-0000-0000-000000000000
+QueryBaseDN                           :
+QueryBaseDNRestrictionEnabled         : False
+MailboxMoveTargetMDB                  :
+MailboxMoveSourceMDB                  :
+MailboxMoveFlags                      : None
+MailboxMoveRemoteHostName             :
+MailboxMoveBatchName                  :
+MailboxMoveStatus                     : None
+MailboxRelease                        :
+ArchiveRelease                        :
+IsPersonToPersonTextMessagingEnabled  : False
+IsMachineToPersonTextMessagingEnabled : False
+UserSMimeCertificate                  : {}
+UserCertificate                       : {}
+CalendarVersionStoreDisabled          : False
+PersistedCapabilities                 : {}
+AuditEnabled                          : False
+AuditLogAgeLimit                      : 90.00:00:00
+AuditAdmin                            : {Update, Move, MoveToDeletedItems, SoftDelete...}
+AuditDelegate                         : {Update, SoftDelete, HardDelete, SendAs...}
+AuditOwner                            : {}
+WhenMailboxCreated                    :
+SourceAnchor                          :
+IsSoftDeletedByRemove                 : False
+IsSoftDeletedByDisable                : False
+IsInactiveMailbox                     : False
+IncludeInGarbageCollection            : False
+WhenSoftDeleted                       :
+InPlaceHolds                          : {}
+GeneratedOfflineAddressBooks          : {}
+AccountDisabled                       : True
+StsRefreshTokensValidFrom             :
+DataEncryptionPolicy                  :
+Extensions                            : {}
+HasPicture                            : False
+HasSpokenName                         : False
+IsDirSynced                           : False
+AddressListMembership                 : {}
+AdministrativeUnits                   : {}
+Alias                                 : ExchangeOnlineEssentials-f9e5ddeb-06bf-45be-8943-7667105d75
+                                        23
+OrganizationalUnit                    : nampr02a007.prod.outlook.com/Microsoft Exchange Hosted
+                                        Organizations/posd.onmicrosoft.com
+CustomAttribute1                      :
+DisplayName                           : ExchangeOnlineEssentials
+ExternalDirectoryObjectId             :
+LastExchangeChangedTime               :
+LegacyExchangeDN                      : /o=ExchangeLabs/ou=Exchange Administrative Group (FYDIBOHF2
+                                        3SPDLT)/cn=Recipients/cn=1356ead2e62d47d383e4aed83fd29f6b-E
+                                        xchangeOnl
+MaxSendSize                           : Unlimited
+MaxReceiveSize                        : Unlimited
+ModeratedBy                           : {}
+PoliciesIncluded                      : {{26491cfc-9e50-4857-861b-0cb8df22b5d7},
+                                        ccba5f52-17de-44cb-84dd-177ac020f27e}
+PoliciesExcluded                      : {}
+EmailAddressPolicyEnabled             : True
+RecipientType                         : UserMailbox
+RecipientTypeDetails                  : MailboxPlan
+RequireSenderAuthenticationEnabled    : False
+Identity                              : ExchangeOnlineEssentials-f9e5ddeb-06bf-45be-8943-7667105d75
+                                        23
+IsValid                               : True
+ExchangeVersion                       : 0.20 (15.0.0.0)
+Name                                  : ExchangeOnlineEssentials-f9e5ddeb-06bf-45be-8943-7667105d75
+                                        23
+DistinguishedName                     : CN=ExchangeOnlineEssentials-f9e5ddeb-06bf-45be-8943-7667105
+                                        d7523,OU=posd.onmicrosoft.com,OU=Microsoft Exchange Hosted
+                                        Organizations,DC=NAMPR02A007,DC=PROD,DC=OUTLOOK,DC=COM
+Guid                                  : e9ab299d-baeb-4696-b173-3d3faa8db647
+ObjectCategory                        : NAMPR02A007.PROD.OUTLOOK.COM/Configuration/Schema/Person
+ObjectClass                           : {top, person, organizationalPerson, user}
+WhenChanged                           : 2/28/2017 10:37:37 AM
+WhenCreated                           : 2/28/2017 10:37:35 AM
+WhenChangedUTC                        : 2/28/2017 3:37:37 PM
+WhenCreatedUTC                        : 2/28/2017 3:37:35 PM
+OrganizationId                        : NAMPR02A007.PROD.OUTLOOK.COM/Microsoft Exchange Hosted
+                                        Organizations/posd.onmicrosoft.com - NAMPR02A007.PROD.OUTLO
+                                        OK.COM/ConfigurationUnits/posd.onmicrosoft.com/Configuratio
+                                        n
+Id                                    : ExchangeOnlineEssentials-f9e5ddeb-06bf-45be-8943-7667105d75
+                                        23
+OriginatingServer                     : BY2PR02A007DC01.NAMPR02A007.PROD.OUTLOOK.COM
+ObjectState                           : Unchanged
+
+
+
+PS C:\scripts> Get-MailboxPlan | select *def*
+
+
+IsDefault                    : False
+IsDefaultForPreviousVersion  : False
+UseDatabaseRetentionDefaults : False
+UseDatabaseQuotaDefaults     : False
+DefaultPublicFolderMailbox   :
+
+IsDefault                    : False
+IsDefaultForPreviousVersion  : False
+UseDatabaseRetentionDefaults : False
+UseDatabaseQuotaDefaults     : False
+DefaultPublicFolderMailbox   :
+
+IsDefault                    : True
+IsDefaultForPreviousVersion  : False
+UseDatabaseRetentionDefaults : False
+UseDatabaseQuotaDefaults     : False
+DefaultPublicFolderMailbox   :
+
+IsDefault                    : False
+IsDefaultForPreviousVersion  : False
+UseDatabaseRetentionDefaults : False
+UseDatabaseQuotaDefaults     : True
+DefaultPublicFolderMailbox   :
+
+
+

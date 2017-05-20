@@ -1,0 +1,15 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<plasterManifest
+  schemaVersion="1.0" xmlns="http://www.microsoft.com/schemas/PowerShell/Plaster/v1">
+  <metadata>
+    <name>PlasterTemplate01</name>
+    <id>4eb597c0-0e47-4519-b51d-3986069c4c45</id>
+    <version>1.0.0</version>
+    <title>PlasterTemplate01</title>
+    <description></description>
+    <author></author>
+    <tags></tags>
+  </metadata>
+  <parameters></parameters>
+  <content></content>
+</plasterManifest>

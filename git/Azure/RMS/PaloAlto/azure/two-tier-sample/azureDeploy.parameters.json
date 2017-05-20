@@ -1,0 +1,31 @@
+{
+  "$schema": "http://schema.management.azure.com/schemas/2015-01-01/deploymentParameters.json#",
+  "contentVersion": "1.0.0.0",
+  "parameters": {
+    "StorageAccountName": {
+      "value": "pantestdrivetest"
+    },
+    "StorageAccountType":{
+        "value": "Standard_LRS"
+    }
+    "FirewallDnsName": {
+      "value": "pan-fw"
+    },
+    "NatDnsName": {
+      "value": "pan-nat"
+    },
+    "FirewallVmName": {
+      "value": "pan-fw"
+    },
+    "FirewallVmSize": {
+      "value": "Standard_D3_v2"
+    },
+    "FromGatewayLogin": {
+      "value": "0.0.0.0/0"
+    },
+    "IPaddressPrefix": {
+      "value": "10.5"
+    }
+  }
+}
+

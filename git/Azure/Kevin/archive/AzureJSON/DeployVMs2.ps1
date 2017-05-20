@@ -1,0 +1,2 @@
+﻿New-AzureRmResourceGroup -Name GORGADFS2 -Location "EAST US 2"
+New-AzureRmResourceGroupDeployment -Name godeploy03 -ResourceGroupName GORGADFS2 -TemplateFile 'C:\Users\kevinb\Documents\Visual Studio 2015\Projects\A2\DeploymentTemplate.json' -TemplateParameterFile 'C:\Users\kevinb\Documents\Visual Studio 2015\Projects\A2\DeploymentTemplate.param.dev.json'

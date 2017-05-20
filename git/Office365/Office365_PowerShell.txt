@@ -1,0 +1,304 @@
+﻿**********************
+Windows PowerShell transcript start
+Start time: 20170515151859
+Username: DKEVIN\KevinB
+RunAs User: DKEVIN\KevinB
+Machine: KEVIN (Microsoft Windows NT 10.0.14393.0)
+Host Application: C:\Windows\System32\WindowsPowerShell\v1.0\powershell.exe -NoExit -Command Import-Module MSOnline
+Process ID: 23752
+PSVersion: 5.1.14393.206
+PSEdition: Desktop
+PSCompatibleVersions: 1.0, 2.0, 3.0, 4.0, 5.0, 5.1.14393.206
+BuildVersion: 10.0.14393.206
+CLRVersion: 4.0.30319.42000
+WSManStackVersion: 3.0
+PSRemotingProtocolVersion: 2.3
+SerializationVersion: 1.1.0.1
+**********************
+Transcript started, output file is .\Office365_PowerShell.txt
+Get-MsolUser : User Not Found.  User: kevinasdfasd@sentt.onmicrosoft.com.
+At C:\Program Files\WindowsPowerShell\Modules\License365\License365.psm1:349 char:17
++         $user = Get-MsolUser -UserPrincipalName $_.UserPrincipalName
++                 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+    + CategoryInfo          : OperationStopped: (:) [Get-MsolUser], MicrosoftOnlineException
+    + FullyQualifiedErrorId : 
+Microsoft.Online.Administration.Automation.UserNotFoundException,Microsoft.Online.Administration.Automation.GetUser
+Get-MsolUser : User Not Found.  User: kevinasdfasd@sentt.onmicrosoft.com.
+At C:\Program Files\WindowsPowerShell\Modules\License365\License365.psm1:349 char:17
++         $user = Get-MsolUser -UserPrincipalName $_.UserPrincipalName
++                 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+    + CategoryInfo          : OperationStopped: (:) [Get-MsolUser], MicrosoftOnlineException
+    + FullyQualifiedErrorId : Microsoft.Online.Administration.Automation.UserNotFoundException,Microsoft.Online.Administration.Automation.
+   GetUser
+
+Set-MsolUser : You must provide a required property: Parameter name: ObjectId
+At C:\Program Files\WindowsPowerShell\Modules\License365\License365.psm1:352 char:9
++         Set-MsolUser -UserPrincipalName $user.userprincipalname -Usag ...
++         ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+    + CategoryInfo          : OperationStopped: (:) [Set-MsolUser], MicrosoftOnlineException
+    + FullyQualifiedErrorId : Microsoft.Online.Administration.Automation.RequiredPropertyNotSetException,Microsoft.Onlin
+e.Administration.Automation.SetUser
+Set-MsolUser : You must provide a required property: Parameter name: ObjectId
+At C:\Program Files\WindowsPowerShell\Modules\License365\License365.psm1:352 char:9
++         Set-MsolUser -UserPrincipalName $user.userprincipalname -Usag ...
++         ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+    + CategoryInfo          : OperationStopped: (:) [Set-MsolUser], MicrosoftOnlineException
+    + FullyQualifiedErrorId : Microsoft.Online.Administration.Automation.RequiredPropertyNotSetException,Microsoft.Online.Administration.A
+   utomation.SetUser
+
+ is not assigned SKU: sentt:ENTERPRISEPACK. Adding SKU with Base Options
+PS C:\scripts\git\Office365> TerminatingError(Set-MsolUserLicense): "Cannot bind argument to parameter 'UserPrincipalName' because it is null."
+WARNING: Errors logged to 2017-05-15_15-03-28-error.txt
+PS C:\scripts\git\Office365> help Set-365License
+
+NAME
+    Set-365License
+
+SYNTAX
+    Set-365License [-Users] <string[]> [[-AddOption] {Teams | Sway | Yammer | Flow | OfficePro | StaffHub | Planner | PowerApps | AzureRMS
+    | OfficeOnline | SharePoint | Skype | Exchange | Intune | Azure_Info_Protection | Azure_AD_Premium | Azure_Rights_Mgt |
+    Azure_MultiFactorAuth}] [[-AddOption2] {Teams | Sway | Yammer | Flow | OfficePro | StaffHub | Planner | PowerApps | AzureRMS |
+    OfficeOnline | SharePoint | Skype | Exchange | Intune | Azure_Info_Protection | Azure_AD_Premium | Azure_Rights_Mgt |
+    Azure_MultiFactorAuth}] [[-AddOption3] {Teams | Sway | Yammer | Flow | OfficePro | StaffHub | Planner | PowerApps | AzureRMS |
+    OfficeOnline | SharePoint | Skype | Exchange | Intune | Azure_Info_Protection | Azure_AD_Premium | Azure_Rights_Mgt |
+    Azure_MultiFactorAuth}] [[-RemoveOption] {Teams | Sway | Yammer | Flow | OfficePro | StaffHub | Planner | PowerApps | AzureRMS |
+    OfficeOnline | SharePoint | Skype | Exchange | Intune | Azure_Info_Protection | Azure_AD_Premium | Azure_Rights_Mgt |
+    Azure_MultiFactorAuth}] [[-RemoveOption2] {Teams | Sway | Yammer | Flow | OfficePro | StaffHub | Planner | PowerApps | AzureRMS |
+    OfficeOnline | SharePoint | Skype | Exchange | Intune | Azure_Info_Protection | Azure_AD_Premium | Azure_Rights_Mgt |
+    Azure_MultiFactorAuth}] [[-RemoveOption3] {Teams | Sway | Yammer | Flow | OfficePro | StaffHub | Planner | PowerApps | AzureRMS |
+    OfficeOnline | SharePoint | Skype | Exchange | Intune | Azure_Info_Protection | Azure_AD_Premium | Azure_Rights_Mgt |
+    Azure_MultiFactorAuth}] [[-ErrorLog] <string>] [-E3] [-E5] [-EMS] [-RemoveSKU] [-PowerAppsandLogicFlows] [-PowerBI] [-PowerBIPro]
+    [-PowerBIFree] [-RMSAdhoc] [-WhatIf] [-Confirm]  [<CommonParameters>]
+
+
+ALIASES
+    None
+
+
+REMARKS
+    None
+PS C:\scripts\git\Office365> Help Set-365License -Full
+
+NAME
+    Set-365License
+
+SYNTAX
+    Set-365License [-Users] <string[]> [[-AddOption] {Teams | Sway | Yammer | Flow | OfficePro | StaffHub | Planner | PowerApps | AzureRMS
+    | OfficeOnline | SharePoint | Skype | Exchange | Intune | Azure_Info_Protection | Azure_AD_Premium | Azure_Rights_Mgt |
+    Azure_MultiFactorAuth}] [[-AddOption2] {Teams | Sway | Yammer | Flow | OfficePro | StaffHub | Planner | PowerApps | AzureRMS |
+    OfficeOnline | SharePoint | Skype | Exchange | Intune | Azure_Info_Protection | Azure_AD_Premium | Azure_Rights_Mgt |
+    Azure_MultiFactorAuth}] [[-AddOption3] {Teams | Sway | Yammer | Flow | OfficePro | StaffHub | Planner | PowerApps | AzureRMS |
+    OfficeOnline | SharePoint | Skype | Exchange | Intune | Azure_Info_Protection | Azure_AD_Premium | Azure_Rights_Mgt |
+    Azure_MultiFactorAuth}] [[-RemoveOption] {Teams | Sway | Yammer | Flow | OfficePro | StaffHub | Planner | PowerApps | AzureRMS |
+    OfficeOnline | SharePoint | Skype | Exchange | Intune | Azure_Info_Protection | Azure_AD_Premium | Azure_Rights_Mgt |
+    Azure_MultiFactorAuth}] [[-RemoveOption2] {Teams | Sway | Yammer | Flow | OfficePro | StaffHub | Planner | PowerApps | AzureRMS |
+    OfficeOnline | SharePoint | Skype | Exchange | Intune | Azure_Info_Protection | Azure_AD_Premium | Azure_Rights_Mgt |
+    Azure_MultiFactorAuth}] [[-RemoveOption3] {Teams | Sway | Yammer | Flow | OfficePro | StaffHub | Planner | PowerApps | AzureRMS |
+    OfficeOnline | SharePoint | Skype | Exchange | Intune | Azure_Info_Protection | Azure_AD_Premium | Azure_Rights_Mgt |
+    Azure_MultiFactorAuth}] [[-ErrorLog] <string>] [-E3] [-E5] [-EMS] [-RemoveSKU] [-PowerAppsandLogicFlows] [-PowerBI] [-PowerBIPro]
+    [-PowerBIFree] [-RMSAdhoc] [-WhatIf] [-Confirm]  [<CommonParameters>]
+
+
+PARAMETERS
+    -AddOption <string>
+
+        Required?                    false
+        Position?                    1
+        Accept pipeline input?       false
+        Parameter set name           (All)
+        Aliases                      None
+        Dynamic?                     false
+
+    -AddOption2 <string>
+
+        Required?                    false
+        Position?                    2
+        Accept pipeline input?       false
+        Parameter set name           (All)
+        Aliases                      None
+        Dynamic?                     false
+
+    -AddOption3 <string>
+
+        Required?                    false
+        Position?                    3
+        Accept pipeline input?       false
+        Parameter set name           (All)
+        Aliases                      None
+        Dynamic?                     false
+
+    -Confirm
+
+        Required?                    false
+        Position?                    Named
+        Accept pipeline input?       false
+        Parameter set name           (All)
+        Aliases                      cf
+        Dynamic?                     false
+
+    -E3
+
+        Required?                    false
+        Position?                    Named
+        Accept pipeline input?       false
+        Parameter set name           (All)
+        Aliases                      None
+        Dynamic?                     false
+
+    -E5
+
+        Required?                    false
+        Position?                    Named
+        Accept pipeline input?       false
+        Parameter set name           (All)
+        Aliases                      None
+        Dynamic?                     false
+
+    -EMS
+
+        Required?                    false
+        Position?                    Named
+        Accept pipeline input?       false
+        Parameter set name           (All)
+        Aliases                      None
+        Dynamic?                     false
+
+    -ErrorLog <string>
+
+        Required?                    false
+        Position?                    7
+        Accept pipeline input?       false
+        Parameter set name           (All)
+        Aliases                      None
+        Dynamic?                     false
+
+    -PowerAppsandLogicFlows
+
+        Required?                    false
+        Position?                    Named
+        Accept pipeline input?       false
+        Parameter set name           (All)
+        Aliases                      None
+        Dynamic?                     false
+
+    -PowerBI
+
+        Required?                    false
+        Position?                    Named
+        Accept pipeline input?       false
+        Parameter set name           (All)
+        Aliases                      None
+        Dynamic?                     false
+
+    -PowerBIFree
+
+        Required?                    false
+        Position?                    Named
+        Accept pipeline input?       false
+        Parameter set name           (All)
+        Aliases                      None
+        Dynamic?                     false
+
+    -PowerBIPro
+
+        Required?                    false
+        Position?                    Named
+        Accept pipeline input?       false
+        Parameter set name           (All)
+        Aliases                      None
+        Dynamic?                     false
+
+    -RMSAdhoc
+
+        Required?                    false
+        Position?                    Named
+        Accept pipeline input?       false
+        Parameter set name           (All)
+        Aliases                      None
+        Dynamic?                     false
+
+    -RemoveOption <string>
+
+        Required?                    false
+        Position?                    4
+        Accept pipeline input?       false
+        Parameter set name           (All)
+        Aliases                      None
+        Dynamic?                     false
+
+    -RemoveOption2 <string>
+
+        Required?                    false
+        Position?                    5
+        Accept pipeline input?       false
+        Parameter set name           (All)
+        Aliases                      None
+        Dynamic?                     false
+
+    -RemoveOption3 <string>
+
+        Required?                    false
+        Position?                    6
+        Accept pipeline input?       false
+        Parameter set name           (All)
+        Aliases                      None
+        Dynamic?                     false
+
+    -RemoveSKU
+
+        Required?                    false
+        Position?                    Named
+        Accept pipeline input?       false
+        Parameter set name           (All)
+        Aliases                      None
+        Dynamic?                     false
+
+    -Users <string[]>
+
+        Required?                    true
+        Position?                    0
+        Accept pipeline input?       true (ByValue)
+        Parameter set name           (All)
+        Aliases                      None
+        Dynamic?                     false
+
+    -WhatIf
+
+        Required?                    false
+        Position?                    Named
+        Accept pipeline input?       false
+        Parameter set name           (All)
+        Aliases                      wi
+        Dynamic?                     false
+
+    <CommonParameters>
+        This cmdlet supports the common parameters: Verbose, Debug,
+        ErrorAction, ErrorVariable, WarningAction, WarningVariable,
+        OutBuffer, PipelineVariable, and OutVariable. For more information, see
+        about_CommonParameters (http://go.microsoft.com/fwlink/?LinkID=113216).
+
+
+INPUTS
+    System.String[]
+
+
+OUTPUTS
+    System.Object
+
+ALIASES
+    None
+
+
+REMARKS
+    None
+PS C:\scripts\git\Office365> Help Set-365License -Examples
+
+NAME
+    Set-365License
+
+ALIASES
+    None
+
+
+REMARKS
+    None
